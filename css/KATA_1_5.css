@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('TTLakes-Light.eot');
+    src: local('TT Lakes Light'), local('TTLakes-Light'),
+    url('TTLakes-Light.eot?#iefix') format('embedded-opentype'),
+    url('TTLakes-Light.woff') format('woff'),
+    url('TTLakes-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+    url('TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('TTLakes-Medium.woff') format('woff'),
+    url('TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@media (min-width:320px) {
+
+    .main-menu, .read-more, .hide {
+        display:none;
+    }
+
+    body {
+        box-sizing: border-box;
+        min-width: 320px;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        background-color: #F2F2F2;
+    }
+
+    header {
+        box-sizing: border-box;
+        min-width: 320px;
+        min-height: 80px;
+        background: linear-gradient(#F8F8F8 100%, #FFFFFF 100%);
+        display: flex;
+        align-items: center;
+    }
+
+    h1 {
+        font-family: "TT Lakes", sans-serif;
+        font-size: 16px;
+        padding-left: 16px;
+        color: #7E7E82;
+    }
+
+    .swiper {
+        box-sizing: border-box;
+        min-width: 320px;
+        height: 130px;
+
+    }
+
+    .swiper::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 72px;
+        background: linear-gradient(to left, #F8F8F8 0%, transparent 100%);
+        top: 16px;
+        right: 0;
+        z-index: 2;
+
+    }
+
+    .swiper-slide {
+        box-sizing: border-box;
+        max-width: 224px;
+        height: 72px;
+        border: 1px solid #EAEAEA;
+        border-radius: 5px;
+        margin: 16px 0 16px 16px;
+        background-color: white;
+        z-index: 1;
+    }
+
+    .swiper-pagination {
+        transform: scale(1.5);
+    }
+
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+
+    .btn-forward {
+        background-image: url("../img/go.svg");
+        background-color:white;
+        border:none;
+        width:40px;
+        height:40px;
+        cursor: pointer;
+        margin-right: 16px;
+    }
+
+    .btn-lenovo::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/lenovo.png");
+        width:108px;
+        height:32px;
+        left:16px;
+        bottom:16px;
+    }
+
+    .btn-sumsung::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/sumsung.png");
+        width:116px;
+        height:39px;
+        left:16px;
+        bottom:16px;
+    }
+
+    .btn-apple::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/apple.png");
+        background-repeat: no-repeat;
+        width:44px;
+        height:44px;
+        left:16px;
+        bottom:16px;
+    }
+
+    .btn-view-sonic::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/view_sonic.png");
+        background-repeat: no-repeat;
+        width:128px;
+        height:21px;
+        left:16px;
+        bottom:25px;
+    }
+    .btn-bosch::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/bosch.png");
+        background-repeat: no-repeat;
+        width:128px;
+        height:29px;
+        left:16px;
+        bottom:20px;
+    }
+
+    .btn-hp::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/hp.png");
+        background-repeat: no-repeat;
+        width:52px;
+        height:52px;
+        left:16px;
+        bottom:10px;
+    }
+
+    .btn-acer::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/acer.png");
+        background-repeat: no-repeat;
+        width:94px;
+        height:24px;
+        left:16px;
+        bottom:24px;
+    }
+
+    .btn-sony::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/sony.png");
+        background-repeat: no-repeat;
+        width:128px;
+        height:26px;
+        left:16px;
+        bottom:20px;
+    }
+}
+
+@media (min-width:768px) {
+    .main-menu, .read-more, .hide {
+        display:initial;
+    }
+
+    .swiper {
+        display: none;
+    }
+
+    .main-menu {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 224px);
+        gap:24px;
+        padding: 24px;
+        height:200px;
+        overflow: hidden;
+    }
+
+    .main-menu--open {
+        height: auto;
+    }
+
+    .swiper-slide {
+        margin: 0;
+    }
+
+    .read-more {
+        position:relative;
+        margin:10px 0 0 57px;
+        font-family: "TT Lakes",sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        border:none;
+        cursor: pointer;
+    }
+
+    .read-more::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/icon.svg");
+        width:8px;
+        height:12px;
+        background-repeat: no-repeat;
+        right:120px;
+        top:7px;
+    }
+
+    .read-more--hide {
+        display:none;
+    }
+
+    .hide {
+        position:relative;
+        margin:10px 0 0 57px;
+        font-family: "TT Lakes",sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        border:none;
+        cursor: pointer;
+    }
+
+    .hide::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/icon.svg");
+        width:8px;
+        height:12px;
+        background-repeat: no-repeat;
+        right:75px;
+        top:5px;
+        transform: rotate(180deg);
+    }
+
+    .hide--remove {
+        display: none;
+    }
+}
+
+@media (min-width:1120px) {
+    .main-menu {
+        display:none;
+    }
+
+    .main-menu {
+        min-width:1120px;
+        height:230px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 240px);
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+        padding: 32px;
+    }
+
+    .main-menu--open {
+        height:auto;
+    }
+
+
+
+    .swiper-slide {
+        box-sizing: border-box;
+        max-width: 240px;
+        height: 72px;
+        border: 1px solid #EAEAEA;
+        border-radius: 5px;
+        background-color: white;
+        z-index: 1;
+    }
+
+
+}
